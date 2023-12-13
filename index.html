@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Oeuvres de Montréal</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <script type="module" src="./assets/script/main.mjs"></script>
+
+</head>
+<body>
+    <header class="top-nav">
+        <span class="logo">
+            <img style="height:40px; color:red;" src="./assets/City_of_Montreal_logo.svg" alt="">
+            <a href="index.html">Oeuvres de Montréal</a>
+        </span>
+    </header> 
+    <main>
+        <aside class="recherche">
+            <input type="search" name="champs-rechercher" placeholder="votre recherche"><button class="btn-rechercher">Rechercher</button>
+        </aside>
+        <section class="section-trie">
+            <span class="filtre-applique">Aucun filtre appliqué</span>
+            <input type="radio" name="ordre" value="ASC" id="ASC">
+            <label for="ASC">ASC</label>
+            <input type="radio" name="ordre" value="DESC" id="DESC">
+            <label for="DESC">DESC</label>
+            <button class="btn-liste-titre">Liste par titre</button><button class="btn-liste-artistes">Liste par artiste</button>
+        </section>
+        <aside class="filtre">            
+            <div class="controle">
+                <div class="boutons-listes">
+                    <span class="material-icons">tune</span>
+                    <span class="material-symbols-outlined liste-grid" data-js-actif="1">grid_view</span>
+                    <span class="material-symbols-outlined liste-ligne" data-js-actif="0">view_headline</span>
+                </div>
+                <div class="liste-categorie">
+                </div>
+                <button class="reinitialiser">Réinitialiser</button>
+            </div>
+        </aside>
+        <section class="catalogue">
+        </section>
+        <dialog>
+            <button class="fermer-boite">X</button>
+        </dialog>
+    </main>
+</body>
+</html>
