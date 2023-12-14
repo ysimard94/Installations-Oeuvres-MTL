@@ -105,10 +105,8 @@ export default class Catalogue{
             uneOeuvre.NomArtistes = artisteNom;
 
             chaineHtml += `<article class="carte">
-                                <header>
                                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&zoom=14&markers=size=mid|${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&size=250x250&key=AIzaSyCsfanp2M2Z6sK-XD94E9CU75bYnNvOW3w"></img>
                                     <h2>${uneOeuvre.Titre}</h2> 
-                                </header>
                                     <div class="contenu">
                                     <h3>${uneOeuvre.CategorieObjet}</h3>
                                     <h4>${uneOeuvre.SousCategorieObjet}</h4>
