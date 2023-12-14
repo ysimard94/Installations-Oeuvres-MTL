@@ -16,7 +16,7 @@ Top Nav
     flex-direction: row;
     justify-content: flex-start;
     height: 64px;
-    background-color: hsl(0, 100%, 50%, 0.7);
+    background-color: hsl(0, 92%, 38%, 1);
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
@@ -119,8 +119,13 @@ Section filtre
 }
 
 .filtre [data-js-actif='1']{
-    border: 1px solid #CCC;
+    outline: 1px solid #CCC;
 }
+
+.filtre [data-filtre-actif='1'] {
+    background-color: hsla(0, 50%, 0%, 0.15);
+}
+
 .filtre .choixFiltre{
     border-left: 2px solid lightgrey;
     list-style-type: none;
@@ -162,6 +167,7 @@ div.liste-categorie .material-icons {
 }
 .boutons-listes{
     display: flex;
+    margin-bottom: 16px;
 }
 .material-symbols-outlined:first-of-type{
     margin-left: auto;
@@ -214,7 +220,7 @@ Section catalogue
 .catalogue .carte img {
     object-fit: cover;
     max-width: 100%;
-    opacity: .2;
+    border-radius: 10px;
 }
 
 /************************

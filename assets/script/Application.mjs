@@ -104,10 +104,10 @@ export default class Application
         {
             // Si au clic du filtre il est déjà actif, il retourne une valeur null à la méthode
             // ce qui va retourner le tableau initial ainsi que d'enlever la sélection de ce filtre
-            if(cible.dataset.jsActif == 1)
+            if(cible.dataset.filtreActif == 1)
             {
                 dataFiltre = this.#oFiltre.appliquerFiltre();    
-                cible.dataset.jsActif = 0;
+                cible.dataset.filtreActif = 0;
                 filtreApplique.innerHTML = "Aucun filtre appliqué";
             }
             // Sinon celui-ci retourne en paramètre la catégorie et va retourner un tableau avec les données correspondantes pour l'afficher
@@ -119,12 +119,12 @@ export default class Application
                 };
 
                 // Pour enlever la bordure de tout filtre sélectionné antérieurement pour l'appliquer que sur le nouveau
-                document.querySelectorAll("li[data-js-actif='1']").forEach((unElement)=>
+                document.querySelectorAll("li[data-filtre-actif='1']").forEach((unElement)=>
                 {
-                    unElement.dataset.jsActif = 0;
+                    unElement.dataset.filtreActif = 0;
                 })
 
-                cible.dataset.jsActif = 1;
+                cible.dataset.filtreActif = 1;
                 dataFiltre = this.#oFiltre.appliquerFiltre(param);
                 filtreApplique.innerHTML = "Filtre appliqué : " + param['valeur'];
             };

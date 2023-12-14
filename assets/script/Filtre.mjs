@@ -77,9 +77,9 @@ export default class Filtre
     reinitialiseFiltre(boutons){
         for(let filtre of boutons)
         {
-            if(filtre.dataset.jsActif == 1)
+        if(filtre.dataset.filtreActif == 1)
             {
-                filtre.dataset.jsActif = 0;
+                filtre.dataset.filtreActif = 0;
             };
         };
     };
@@ -92,7 +92,7 @@ export default class Filtre
             chaineHTML += `<div><div class="filtre-bouton">${uneCatFiltre.etiquette}<span class="material-icons">arrow_drop_down</span></div><div class="filtre-ferme">`;
 
             uneCatFiltre.valeurs.forEach((uneValeur)=>{
-                chaineHTML += `<li class="choixFiltre" data-js-cat="${uneCatFiltre.propriete}" data-js-cat-valeur="${uneValeur}" data-js-actif="0">${uneValeur}</li>`;
+                chaineHTML += `<li class="choixFiltre" data-js-cat="${uneCatFiltre.propriete}" data-js-cat-valeur="${uneValeur}" data-filtre-actif="0">${uneValeur}</li>`;
             })
             
             chaineHTML += `</div></div>`;
