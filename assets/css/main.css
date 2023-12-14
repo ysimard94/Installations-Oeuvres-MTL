@@ -1,5 +1,5 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: system-ui, sans-serif;
 
 }
 
@@ -16,7 +16,7 @@ Top Nav
     flex-direction: row;
     justify-content: flex-start;
     height: 64px;
-    background-color: turquoise;
+    background-color: hsl(0, 100%, 50%, 0.7);
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
@@ -28,15 +28,24 @@ Top Nav
     margin-right: 32px;
 }
 
-.top-nav a {
-    display: block;
-    margin: 0px 8px;
-    text-align: center;
-}
-
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.logo *+* {
+  margin-left: 8px;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+    fill: white;
+    height: 48px;
 }
 
 /***************************
@@ -113,13 +122,18 @@ Section filtre
     border: 1px solid #CCC;
 }
 .filtre .choixFiltre{
+    border-left: 2px solid lightgrey;
     list-style-type: none;
-    padding: 4px;
+    padding: 8px 12px;
+}
+
+.filtre .choixFiltre:last-of-type {
+    border-bottom-left-radius: 10px;
 }
 
 .filtre .choixFiltre:hover{
     cursor: pointer;
-    background-color: rgba(200,200,200,0.5);
+    background-color: hsla(0, 0%, 50%, 0.1);
 }
 .liste-categorie{
     flex-direction: column;
@@ -130,6 +144,8 @@ Section filtre
 }
 .filtre-bouton {
     display:flex;
+    margin-bottom: 4px;
+    font-weight: bold;
     align-items: center;
     cursor: pointer;
 }
@@ -137,7 +153,7 @@ div.liste-categorie .material-icons {
     margin-left: auto;
 }
 
-.liste-ferme {
+.liste-ouverte {
     transform: rotate(180deg);
 }
 
@@ -184,9 +200,9 @@ Section catalogue
 
 .carte:hover{
     cursor: pointer;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 2px 8px rgba(25, 25, 25, 0.2);
-    transform: scale(1.02);
+    transition: 150ms ease-in-out;
+    box-shadow: 0 2px 8px rgba(25, 25, 25, 0.1);
+    transform: scale(1.01);
 }
 
 .catalogue .carte .contenu {

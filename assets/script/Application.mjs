@@ -187,14 +187,14 @@ export default class Application
 
         let bouton = cible.querySelector("span");
 
-        if(cible.classList.contains("filtre-bouton") && !bouton.classList.contains("liste-ferme"))
+        if(cible.classList.contains("filtre-bouton") && bouton.classList.contains("liste-ouverte"))
         {
-            bouton.classList.add("liste-ferme");
+            bouton.classList.remove("liste-ouverte");
             cibleVoisin.classList.add("filtre-ferme");
         }
         else 
         {
-            bouton.classList.remove("liste-ferme");
+            bouton.classList.add("liste-ouverte");
             cibleVoisin.classList.remove("filtre-ferme");
         };
     };
