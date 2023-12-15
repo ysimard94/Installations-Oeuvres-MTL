@@ -105,13 +105,13 @@ export default class Catalogue{
             uneOeuvre.NomArtistes = artisteNom;
 
             chaineHtml += `<article class="carte">
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&zoom=14&markers=size=mid|${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&size=250x250&key=AIzaSyCsfanp2M2Z6sK-XD94E9CU75bYnNvOW3w"></img>
-                                    <h2>${uneOeuvre.Titre}</h2> 
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&zoom=14&markers=size=mid|${uneOeuvre.CoordonneeLatitude},${uneOeuvre.CoordonneeLongitude}&size=400x300&key=AIzaSyCsfanp2M2Z6sK-XD94E9CU75bYnNvOW3w"></img>
                                     <div class="contenu">
-                                    <h3>${uneOeuvre.CategorieObjet}</h3>
-                                    <h4>${uneOeuvre.SousCategorieObjet}</h4>
+                                    <h2 class="contenu-titre">${uneOeuvre.Titre}</h2> 
+                                    <h3 class="contenu-categorie">${uneOeuvre.CategorieObjet}</h3>
+                                    <h4 class="contenu-sous-categorie">${uneOeuvre.SousCategorieObjet}</h4>
                                     <p>Arrondissement : ${uneOeuvre.Arrondissement}</p>
-                                    <p>Fin de production : ${uneOeuvre.DateFinProduction}<p>
+                                    <p>Fin de production : ${uneOeuvre.DateFinProduction}</p>
                                     <p>Artiste(s) : ${artisteNom}</p>
                                 </div>
                             </article>`;

@@ -89,13 +89,13 @@ export default class Filtre
         let chaineHTML = "";
 
         this.#aCatFiltre.forEach((uneCatFiltre)=>{
-            chaineHTML += `<div><div class="filtre-bouton">${uneCatFiltre.etiquette}<span class="material-icons">arrow_drop_down</span></div><div class="filtre-ferme">`;
+            chaineHTML += `<div><div class="filtre-bouton">${uneCatFiltre.etiquette}<span class="material-icons">arrow_drop_down</span></div><ul class="filtre-ferme">`;
 
             uneCatFiltre.valeurs.forEach((uneValeur)=>{
                 chaineHTML += `<li class="choixFiltre" data-js-cat="${uneCatFiltre.propriete}" data-js-cat-valeur="${uneValeur}" data-filtre-actif="0">${uneValeur}</li>`;
             })
             
-            chaineHTML += `</div></div>`;
+            chaineHTML += `</ul></div>`;
         });
 
         this.#domParent.innerHTML = chaineHTML;

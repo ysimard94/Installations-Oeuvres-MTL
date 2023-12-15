@@ -112,7 +112,7 @@ Section filtre
 }
 .filtre ul{
     margin:0px;
-    padding: 0px 0px 0px 16px;
+    padding: 0px;
 }
 .filtre div span{
     text-align:end;
@@ -180,11 +180,12 @@ div.liste-categorie .material-icons {
 Section catalogue
 ******************************/
 .catalogue{
-    padding: 16px 16px;
+    padding: 16px;
     display: grid;
-    grid-template-columns : repeat(auto-fit, minmax(200px, .25fr));
+    grid-template-columns : repeat(auto-fit, minmax(200px, 1fr));
     gap:16px;
-    width: calc(95vw - 150px);
+    width: calc(100% - 220px);
+    justify-content: space-around;
 }
 
 .catalogue-ligne {
@@ -195,11 +196,13 @@ Section catalogue
     margin-top: 1em;
 }
 
-.catalogue .carte {
+.carte {
     border: 1px solid rgba(25, 25, 25, 0.1);
     border-radius: 15px;
     padding: 10px;
     overflow-y: hidden;
+    display:flex;
+    flex-direction: column;
 }
 
 
@@ -210,12 +213,24 @@ Section catalogue
     transform: scale(1.01);
 }
 
-.catalogue .carte .contenu {
-    text-overflow: ellipsis;
+.contenu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.catalogue .carte header{
-    max-width: 200px;
+
+.contenu-titre {
+    margin-block: 8px 4px;
 }
+
+.contenu h4 {
+    margin-bottom: auto;
+}
+
+.contenu > *+* {
+    margin-block: 4px 0;
+}
+
 .catalogue .carte img {
     object-fit: cover;
     max-width: 100%;
